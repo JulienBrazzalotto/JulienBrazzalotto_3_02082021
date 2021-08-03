@@ -1,0 +1,27 @@
+
+@keyframes fa-circle-notch{
+    0% {
+        color: #99E2D0;        
+    }
+    33% {
+        color: #FF79DA;        
+    }
+    66% {
+        color: #9356DC;        
+    }
+    100%{
+        color: #99E2D0;
+    }
+    
+}
+
+.loader{
+    animation: fa-circle-notch 1s infinite both;
+    
+}   
+
+.fa-circle-notch{
+        font-size: 200px;
+        animation-iteration-count: 3;
+        
+}

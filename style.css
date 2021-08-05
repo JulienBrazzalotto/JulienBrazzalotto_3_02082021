@@ -1,27 +1,225 @@
+@font-face {
+    font-family:"shrikland";
+    src: url(./polices/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(./polices/Roboto/Roboto-Regular.ttf);
+}
 
 @keyframes fa-circle-notch{
     0% {
-        color: #99E2D0;        
+        color: #9356DC;
+                
     }
     33% {
         color: #FF79DA;        
     }
     66% {
-        color: #9356DC;        
+        color: #99E2D0;
+        opacity: 1;        
     }
     100%{
         color: #99E2D0;
+        opacity: 0;
     }
     
 }
 
+/*loader*/
 .loader{
-    animation: fa-circle-notch 1s infinite both;
-    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -75px;
+    animation: fa-circle-notch  3s 1 both;  
 }   
 
 .fa-circle-notch{
-        font-size: 200px;
-        animation-iteration-count: 3;
-        
+    font-size: 150px;   
+    animation: fa-spin linear 500ms infinite;  
 }
+/*fin loader*/
+
+body{
+    font-family: "roboto", verdana, serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header, form, h1, .ville, .soustitre, .boutonrestaurants, .bouton, .fonctionnement li, figure, figcaption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header{
+    padding: 20px 0 20px 0;
+}
+
+.logo{
+    width: 165px;
+}
+
+form{
+    align-items: center;
+    background-color: #eaeaea;
+    box-shadow: inset 0px 11px 8px -15px  black;
+    height: 50px;
+}
+
+::placeholder{
+    font-family: "roboto";
+    font-weight: bold;
+    color: black;
+    background-color: #eaeaea;
+    
+}
+
+.presentation:not(form){
+    background-color: #f6f6f6;
+    height: 286px;
+}
+
+.ville{
+    border: none;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+.bouton{
+    height: 50px;
+    width: 220px;
+    border-radius: 200px;
+    color: white;
+    background: linear-gradient(to top left, #9356DC, #FF79DA);
+   
+}
+
+.fonctionnement{
+    margin: 5vw;
+    margin-bottom: 15vw;
+}
+
+.fonctionnement ul{
+    width: 100%;
+    padding: 0;
+}
+
+.fonctionnement li{
+    height: 75px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);
+    margin: 0 0 20px 0;
+    justify-content: flex-start;
+    font-weight: bold;
+
+}
+
+.nombre{
+    position: relative;
+    background-color: #9356DC;
+    color: white;
+    border: 1px solid #9356DC;
+    border-radius: 200px;
+    padding: 1px 5px 0 5px;
+    margin: 0 6vw 0 -10px;
+}
+
+.fa-mobile-alt, .fa-list-ul, .fa-store{
+    margin-right: 10vw;
+}
+
+.restaurants{
+    padding: 8vw 5vw 5vw 5vw;
+    background-color: #f6f6f6;
+}
+
+.titrerestaurants{
+    margin-bottom: 10vw;
+}
+
+figure{
+    display: block;
+    margin: 0 0 5vw 0;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);
+    height: 270px;
+}
+
+img:not(.logo){
+    border-radius: 20px 20px 0 0;
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+}
+
+figcaption{
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5vw;
+}
+
+.nomrestaurants{
+    margin: 10px 0 0 0;
+}
+
+.nouveau{
+    position: relative;
+    left: 70%;
+    bottom: 260px;
+    border: 2px solid #99E2D0;
+    padding: 1vw 2vw 1vw 2vw;
+    background-color: #99E2D0;
+    color: #008766;
+}
+
+.fa-heart{
+    position: absolute;
+    right: 10vw;
+    font-size: 1.5rem;
+    
+}
+
+footer{
+    background-color: #353535;
+    color: white;
+    padding: 5vw;
+}
+
+footer h3{
+    font-family: "shrikland", Verdana, sans-serif;
+    font-size: 1.3rem;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer li{
+    margin-bottom: 10px;
+}
+
+footer a{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.fa-hands-helping{
+    font-size: 0.9rem;
+}
+
+.fa-utensils, .fa-hands-helping{
+    margin-right: 10px;
+}
+
+

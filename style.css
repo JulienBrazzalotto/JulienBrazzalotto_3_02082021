@@ -6,6 +6,8 @@
 @font-face {
     font-family: "roboto";
     src: url(./polices/Roboto/Roboto-Regular.ttf);
+    src: url(./polices/Roboto/Roboto-Bold.ttf);
+    src: url(./polices/Roboto/Roboto-Black.ttf);
 }
 
 @keyframes fa-circle-notch{
@@ -79,7 +81,6 @@ form{
     font-weight: bold;
     color: black;
     background-color: #eaeaea;
-    
 }
 
 .presentation:not(form){
@@ -88,6 +89,9 @@ form{
 }
 
 .ville{
+    font-weight: bold;
+    font-family: "roboto";
+    height: 30px;
     border: none;
     padding: 0;
     background-color: #eaeaea;

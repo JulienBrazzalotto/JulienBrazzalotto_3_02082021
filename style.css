@@ -1,14 +1,4 @@
-@font-face {
-    font-family:"shrikland";
-    src: url(./polices/Shrikhand/Shrikhand-Regular.ttf);
-}
-
-@font-face {
-    font-family: "roboto";
-    src: url(./polices/Roboto/Roboto-Regular.ttf);
-    src: url(./polices/Roboto/Roboto-Bold.ttf);
-    src: url(./polices/Roboto/Roboto-Black.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Shrikhand&display=swap');
 
 @keyframes fa-circle-notch{
     0% {
@@ -200,7 +190,7 @@ footer{
 }
 
 footer h3{
-    font-family: "shrikland", Verdana, sans-serif;
+    font-family: "Shrikhand", Verdana, sans-serif;
     font-size: 1.3rem;
 }
 

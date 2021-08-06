@@ -2,24 +2,30 @@
 
 @keyframes fa-circle-notch{
     0% {
-        color: #9356DC;
-                
+        color: var(--couleurprimaire-color);                
     }
     33% {
-        color: #FF79DA;        
+        color: var(--couleursecondaire-color);        
     }
     66% {
-        color: #99E2D0;
+        color: var(--couleurtertiaire-color);
         opacity: 1;        
     }
     100%{
-        color: #99E2D0;
+        color: var(--couleurtertiaire-color);
         opacity: 0;
     }
-    
 }
 
-/*loader*/
+html{
+    --couleurprimaire-color: #9356DC;
+    --couleursecondaire-color: #FF79DA ;
+    --couleurtertiaire-color: #99E2D0;
+    --couleurfondgrisform-color: #eaeaea;
+    --couleurfondgrispresentation-color: #f6f6f6;
+    --couleurfondnoirfooter-color: #353535;
+}
+
 .loader{
     position: absolute;
     top: 20%;
@@ -33,10 +39,9 @@
     font-size: 150px;   
     animation: fa-spin linear 500ms infinite;  
 }
-/*fin loader*/
 
 body{
-    font-family: "roboto", verdana, serif;
+    font-family: "Roboto", verdana, serif;
 }
 
 a{
@@ -44,100 +49,22 @@ a{
     color: black;
 }
 
+header{
+    padding: 20px 0 20px 0;
+}
+
+form{
+    align-items: center;
+    background-color: var(--couleurfondgrisform-color);
+    box-shadow: inset 0px 11px 8px -15px  black;
+    height: 50px;
+}
+
 header, form, h1, .ville, .soustitre, .boutonrestaurants, .bouton, .fonctionnement li, figure, figcaption{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-header{
-    padding: 20px 0 20px 0;
-}
-
-.logo{
-    width: 165px;
-}
-
-form{
-    align-items: center;
-    background-color: #eaeaea;
-    box-shadow: inset 0px 11px 8px -15px  black;
-    height: 50px;
-}
-
-::placeholder{
-    font-family: "roboto";
-    font-weight: bold;
-    color: black;
-    background-color: #eaeaea;
-}
-
-.presentation:not(form){
-    background-color: #f6f6f6;
-    height: 286px;
-}
-
-.ville{
-    font-weight: bold;
-    font-family: "roboto";
-    height: 30px;
-    border: none;
-    padding: 0;
-    background-color: #eaeaea;
-}
-
-.bouton{
-    height: 50px;
-    width: 220px;
-    border-radius: 200px;
-    color: white;
-    background: linear-gradient(to top left, #9356DC, #FF79DA);
-   
-}
-
-.fonctionnement{
-    margin: 5vw;
-    margin-bottom: 15vw;
-}
-
-.fonctionnement ul{
-    width: 100%;
-    padding: 0;
-}
-
-.fonctionnement li{
-    height: 75px;
-    background-color: #f6f6f6;
-    border-radius: 25px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);
-    margin: 0 0 20px 0;
-    justify-content: flex-start;
-    font-weight: bold;
-
-}
-
-.nombre{
-    position: relative;
-    background-color: #9356DC;
-    color: white;
-    border: 1px solid #9356DC;
-    border-radius: 200px;
-    padding: 1px 5px 0 5px;
-    margin: 0 6vw 0 -10px;
-}
-
-.fa-mobile-alt, .fa-list-ul, .fa-store{
-    margin-right: 10vw;
-}
-
-.restaurants{
-    padding: 8vw 5vw 5vw 5vw;
-    background-color: #f6f6f6;
-}
-
-.titrerestaurants{
-    margin-bottom: 10vw;
 }
 
 figure{
@@ -149,42 +76,14 @@ figure{
     height: 270px;
 }
 
-img:not(.logo){
-    border-radius: 20px 20px 0 0;
-    height: 175px;
-    width: 100%;
-    object-fit: cover;
-}
-
 figcaption{
     flex-direction: column;
     align-items: flex-start;
     padding-left: 5vw;
 }
 
-.nomrestaurants{
-    margin: 10px 0 0 0;
-}
-
-.nouveau{
-    position: relative;
-    left: 70%;
-    bottom: 260px;
-    border: 2px solid #99E2D0;
-    padding: 1vw 2vw 1vw 2vw;
-    background-color: #99E2D0;
-    color: #008766;
-}
-
-.fa-heart{
-    position: absolute;
-    right: 10vw;
-    font-size: 1.5rem;
-    
-}
-
 footer{
-    background-color: #353535;
+    background-color: var(--couleurfondnoirfooter-color);
     color: white;
     padding: 5vw;
 }
@@ -208,6 +107,105 @@ footer a{
     font-size: 1.3rem;
 }
 
+.logo{
+    width: 165px;
+}
+
+::placeholder{
+    font-family: "Roboto";
+    font-weight: bold;
+    color: black;
+    background-color: var(--couleurfondgrisform-color);
+}
+
+.presentation:not(form){
+    background-color: var(--couleurfondgrispresentation-color);
+    height: 286px;
+}
+
+.ville{
+    font-weight: bold;
+    font-family: "Roboto";
+    height: 30px;
+    border: none;
+    padding: 0;
+    background-color: var(--couleurfondgrisform-color);
+}
+
+.bouton{
+    height: 50px;
+    width: 220px;
+    border-radius: 200px;
+    color: white;
+    background: linear-gradient(to top left, var(--couleurprimaire-color), var(--couleursecondaire-color));
+   
+}
+
+.fonctionnement{
+    margin: 5vw;
+    margin-bottom: 15vw;
+}
+
+.fonctionnement ul{
+    width: 100%;
+    padding: 0;
+}
+
+.fonctionnement li{
+    height: 75px;
+    background-color: var(--couleurfondgrispresentation-color);
+    border-radius: 25px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);
+    margin: 0 0 20px 0;
+    justify-content: flex-start;
+    font-weight: bold;
+
+}
+
+.nombre{
+    position: relative;
+    background-color: var(--couleurprimaire-color);
+    color: white;
+    border: 1px solid var(--couleurprimaire-color);
+    border-radius: 200px;
+    padding: 1px 5px 0 5px;
+    margin: 0 6vw 0 -10px;
+}
+
+.fa-mobile-alt, .fa-list-ul, .fa-store{
+    margin-right: 10vw;
+}
+
+.restaurants{
+    padding: 8vw 5vw 5vw 5vw;
+    background-color: var(--couleurfondgrispresentation-color);
+}
+
+.titrerestaurants{
+    margin-bottom: 10vw;
+}
+
+.nomrestaurants{
+    margin: 10px 0 0 0;
+}
+
+.nouveau{
+    position: relative;
+    left: 70%;
+    bottom: 260px;
+    border: 2px solid var(--couleurtertiaire-color);
+    padding: 1vw 2vw 1vw 2vw;
+    background-color: var(--couleurtertiaire-color);
+    color: #008766;
+}
+
+.fa-heart{
+    position: absolute;
+    right: 10vw;
+    font-size: 1.5rem;
+    
+}
+
 .fa-hands-helping{
     font-size: 0.9rem;
 }
@@ -216,4 +214,9 @@ footer a{
     margin-right: 10px;
 }
 
-
+img:not(.logo){
+    border-radius: 20px 20px 0 0;
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+}

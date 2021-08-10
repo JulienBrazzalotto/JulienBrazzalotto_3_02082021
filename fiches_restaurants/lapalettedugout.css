@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Shrikhand&display=swap');
+
+html{
+    --couleurprimaire-color: #9356DC;
+    --couleursecondaire-color: #FF79DA ;
+    --couleurtertiaire-color: #99E2D0;
+    --couleurfondgrisform-color: #eaeaea;
+    --couleurfondgrispresentation-color: #f6f6f6;
+    --couleurfondnoirfooter-color: #353535;
+}
+
+body{
+    font-family: 'Roboto', serif;
+    width: 100%;
+}
+
+header,
+figure,
+article header,
+.bouton,
+.commander{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    margin: 20px 0 20px 0;
+}
+
+figure{
+    margin: 0;
+}
+
+img:not(.logo){
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+article{
+    position: absolute;
+    top: 300px ;
+    width: 100%;
+    padding-bottom: 70px;
+    border-radius: 30px 30px 0 0;
+    background-color: var(--couleurfondgrispresentation-color);
+}
+
+article header{
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1{
+    margin-bottom: 0;
+    font-family: 'Shrikhand', serif;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-top: 40px;
+}
+
+article header,
+h2,
+article ul{
+    padding: 0 20px 0 20px;
+}
+
+li,
+ul{
+    padding: 5px 20px 5px 20px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+article li{    
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+article p{
+    font-size: 0.9rem;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    top: 1800px;
+    background-color: var(--couleurfondnoirfooter-color);
+    color: white;
+    font-size: 1.3rem;
+}
+
+footer h3{
+    font-family: 'Shrikhand', Verdana, sans-serif;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+footer li{
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+a{
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.logo{
+    width: 165px;
+}
+
+.fa-arrow-left{
+    position: absolute;
+    left: 5vw;
+    top: 22px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.fa-heart{
+    position: absolute;
+    right: 6vw;
+    top: 40px;
+    font-size: 2rem;
+}
+
+.bouton{
+    margin-top: 60px;
+}
+
+.commander{
+    height: 50px;
+    width: 220px;
+    border-radius: 200px;
+    color: white;
+    background: linear-gradient(to left top, #9356DC, #FF79DA);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.fa-hands-helping{
+    font-size: 0.9rem;
+}
+
+.fa-utensils, .fa-hands-helping{
+    margin-right: 10px;
+}

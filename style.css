@@ -17,6 +17,21 @@
     }
 }
 
+@keyframes coeur{
+    0% {
+        transform: scale(0);
+        color: var(--couleurprimaire-color)
+    }
+    66% {
+        transform: scale(0.8);
+        color: var(--couleurprimaire-color)
+    }
+    100% {
+        transform: scale(1);
+        color: var(--couleursecondaire-color);
+    }
+}
+
 html{
     --couleurprimaire-color: #9356DC;
     --couleursecondaire-color: #FF79DA ;
@@ -26,27 +41,14 @@ html{
     --couleurfondnoirfooter-color: #353535;
 }
 
-.loader{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-top: -75px;
-    margin-left: -75px;
-    animation: fa-circle-notch  3s 1 both;  
-}   
-
-.fa-circle-notch{
-    font-size: 150px;   
-    animation: fa-spin linear 500ms infinite;  
-}
-
 body{
-    font-family: "Roboto", verdana, serif;
+    font-family: 'Roboto', verdana, serif;
 }
 
 a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 header{
@@ -55,12 +57,22 @@ header{
 
 form{
     align-items: center;
+    height: 50px;
     background-color: var(--couleurfondgrisform-color);
     box-shadow: inset 0px 11px 8px -15px  black;
-    height: 50px;
 }
 
-header, form, h1, .ville, .soustitre, .boutonrestaurants, .bouton, .fonctionnement li, figure, figcaption{
+header,
+form,
+figure,
+figcaption,
+h1,
+.ville,
+.soustitre,
+.boutonrestaurants,
+.bouton,
+.fonctionnement li,
+.commande{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,11 +81,11 @@ header, form, h1, .ville, .soustitre, .boutonrestaurants, .bouton, .fonctionneme
 
 figure{
     display: block;
+    height: 270px;
     margin: 0 0 5vw 0;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);
-    height: 270px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
 }
 
 figcaption{
@@ -83,19 +95,19 @@ figcaption{
 }
 
 footer{
-    background-color: var(--couleurfondnoirfooter-color);
-    color: white;
     padding: 5vw;
+    background-color: var(--couleurfondnoirfooter-color);
+    color: white;    
 }
 
 footer h3{
-    font-family: "Shrikhand", Verdana, sans-serif;
+    font-family: 'Shrikhand', Verdana, sans-serif;
     font-size: 1.3rem;
 }
 
 footer ul{
-    list-style: none;
     padding: 0;
+    list-style: none;    
 }
 
 footer li{
@@ -112,23 +124,23 @@ footer a{
 }
 
 ::placeholder{
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-weight: bold;
     color: black;
     background-color: var(--couleurfondgrisform-color);
 }
 
 .presentation:not(form){
-    background-color: var(--couleurfondgrispresentation-color);
     height: 286px;
+    background-color: var(--couleurfondgrispresentation-color);    
 }
 
 .ville{
-    font-weight: bold;
-    font-family: "Roboto";
     height: 30px;
-    border: none;
     padding: 0;
+    border: none;
+    font-weight: bold;
+    font-family: 'Roboto';  
     background-color: var(--couleurfondgrisform-color);
 }
 
@@ -137,13 +149,12 @@ footer a{
     width: 220px;
     border-radius: 200px;
     color: white;
-    background: linear-gradient(to top left, var(--couleurprimaire-color), var(--couleursecondaire-color));
-   
+    background: linear-gradient(to left top, #9356DC, #FF79DA);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
 }
 
 .fonctionnement{
-    margin: 5vw;
-    margin-bottom: 15vw;
+    margin: 5vw 5vw 15vw 5vw;
 }
 
 .fonctionnement ul{
@@ -152,24 +163,39 @@ footer a{
 }
 
 .fonctionnement li{
+    justify-content: flex-start;
+}
+
+.fonctionnement li:not(.commande){  
+    margin: 0 0 20px 0;
     height: 75px;
     background-color: var(--couleurfondgrispresentation-color);
     border-radius: 25px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);
-    margin: 0 0 20px 0;
-    justify-content: flex-start;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
     font-weight: bold;
+}
 
+.commande{   
+    margin: 0 0 20px 0;
+    height: 75px;
+    border-radius: 25px;
+    background-color: hsla(267, 66%, 60%, 0.2);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
+    font-weight: bold;
+}
+
+.fa-store{
+    color: var(--couleurprimaire-color);
 }
 
 .nombre{
     position: relative;
+    margin: 0 6vw 0 -10px;
+    padding: 1px 5px 0 5px;
     background-color: var(--couleurprimaire-color);
     color: white;
     border: 1px solid var(--couleurprimaire-color);
-    border-radius: 200px;
-    padding: 1px 5px 0 5px;
-    margin: 0 6vw 0 -10px;
+    border-radius: 200px; 
 }
 
 .fa-mobile-alt, .fa-list-ul, .fa-store{
@@ -193,8 +219,9 @@ footer a{
     position: relative;
     left: 70%;
     bottom: 260px;
-    border: 2px solid var(--couleurtertiaire-color);
     padding: 1vw 2vw 1vw 2vw;
+    border: 2px solid var(--couleurtertiaire-color);
+    border-radius: 5px;    
     background-color: var(--couleurtertiaire-color);
     color: #008766;
 }
@@ -202,8 +229,8 @@ footer a{
 .fa-heart{
     position: absolute;
     right: 10vw;
-    font-size: 1.5rem;
-    
+    font-size: 2rem;
+    background-color: white;
 }
 
 .fa-hands-helping{
@@ -215,8 +242,146 @@ footer a{
 }
 
 img:not(.logo){
-    border-radius: 20px 20px 0 0;
     height: 175px;
     width: 100%;
+    border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
+
+.bouton:hover{
+    background: linear-gradient(to top left, hsla(267, 66%, 60%, 0.9), hsla(317, 100%, 74%, 0.9));
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+}
+
+.fa-heart:hover{
+    transform-origin: 50% 50%;
+    animation: coeur linear 1s 1 forwards;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.loader{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -75px;
+    animation: fa-circle-notch  3s 1 both;
+}   
+
+.fa-circle-notch{
+    font-size: 150px;   
+    animation: fa-spin linear 500ms infinite;  
+}
+
+@media screen and (min-width: 769px){    
+    .fonctionnement ul,
+    footer,
+    footer ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer, footer ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{
+        margin-top: 50px;
+        font-size: 1.8rem;
+    }
+
+    .logo{
+        width: 250px;
+    }
+
+    .bouton{
+        height: 60px;
+        width: 300px;
+    }
+
+    .fonctionnement{
+        margin: 5vw;
+    }
+
+    .fonctionnement ul{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .fonctionnement li{
+        width: 31%;
+    }
+
+    .nombre{
+        margin: 0 1vw 0 -10px;
+    }
+
+    .fa-mobile-alt, .fa-list-ul, .fa-store{
+        margin-right: 1vw;
+    }
+
+    .restaurants{
+        padding: 5vw;
+    }
+
+}
+
+@media screen and (min-width: 1281px){
+    
+    footer h3{
+        font-size: 2rem;
+    }
+    
+    .logo{
+        width: 350px;
+    }
+
+    .fonctionnement{
+        margin: 0;
+        padding: 2vw;
+    }
+
+    .fonctionnement h2,
+    .titrerestaurants{
+        font-size: 1.8rem;
+    }
+
+    .fonctionnement li{
+        font-size: 1.3rem;
+    }
+
+    .restaurants{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8vw 2vw 5vw 2vw;
+    }
+
+    .titrerestaurants{
+        position: absolute;
+        top: 73vh;
+        margin: 0;
+    }
+
+    img:not(.logo){
+        width: 22vw;
+    }
+
+    figure{
+        width: 100%;
+    }
+
+    figcaption{
+        padding: 0 0 0 2vw;
+    }
+
+    .nouveau{
+        left: 60%;
+        padding: 5px 10px 5px 10px;
+    }
+}
+    

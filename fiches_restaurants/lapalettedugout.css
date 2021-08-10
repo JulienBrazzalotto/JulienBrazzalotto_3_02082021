@@ -83,8 +83,13 @@ article li{
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-article p{
+article p{    
     font-size: 0.9rem;
+}
+
+b{
+    position: absolute;
+    right: 40px;
 }
 
 footer{
@@ -156,3 +161,9 @@ footer a:hover{
 .fa-utensils, .fa-hands-helping{
     margin-right: 10px;
 }
+
+.commander:hover{
+    background: linear-gradient(to top left, hsla(267, 66%, 60%, 0.9), hsla(317, 100%, 74%, 0.9));
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+}
+

@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Shrikhand&display=swap');
 
+@keyframes coeur{
+    0% {
+        transform: scale(0);
+        color: var(--couleurprimaire-color)
+    }
+    66% {
+        transform: scale(0.8);
+        color: var(--couleurprimaire-color)
+    }
+    100% {
+        transform: scale(1);
+        color: var(--couleursecondaire-color);
+    }
+}
+
 html{
     --couleurprimaire-color: #9356DC;
     --couleursecondaire-color: #FF79DA ;
@@ -83,8 +98,12 @@ article li{
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-article p{    
+.complement{   
+    width: 85%; 
     font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 b{
@@ -166,4 +185,12 @@ footer a:hover{
     background: linear-gradient(to top left, hsla(267, 66%, 60%, 0.9), hsla(317, 100%, 74%, 0.9));
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
 }
+
+.fa-heart:hover{
+    transform-origin: 50% 50%;
+    animation: coeur linear 500ms 1 forwards;
+}
+
+
+
 

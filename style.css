@@ -255,7 +255,7 @@ img:not(.logo){
 
 .fa-heart:hover{
     transform-origin: 50% 50%;
-    animation: coeur linear 1s 1 forwards;
+    animation: coeur linear 500ms 1 forwards;
 }
 
 footer a:hover{

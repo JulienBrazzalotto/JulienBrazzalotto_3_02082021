@@ -39,8 +39,13 @@ article header,
     align-items: center;
 }
 
-header{
-    margin: 20px 0 20px 0;
+header:not(article header){
+    position: fixed;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%);
+    margin: 0;
+    padding: 20px 0 20px 0;
+    z-index: 1;
 }
 
 figure{
@@ -49,15 +54,15 @@ figure{
 
 img:not(.logo){
     width: 100%;
-    height: 280px;
+    height: 400px;
     object-fit: cover;
 }
 
 article{
-    position: absolute;
-    top: 300px ;
+    position: relative;
+    top: -100px ;
     width: 100%;
-    padding-bottom: 70px;
+    padding-bottom: 120px;
     border-radius: 30px 30px 0 0;
     background-color: var(--couleurfondgrispresentation-color);
 }
@@ -85,36 +90,46 @@ article ul{
     padding: 0 20px 0 20px;
 }
 
-li,
+li{
+    list-style: none;
+    padding: 0 0 0 20px;
+    margin-bottom: 20px;
+}
+
 ul{
     padding: 5px 20px 5px 20px;
     margin-bottom: 20px;
-    list-style: none;
 }
 
-article li{    
+article li,
+.animation{
+    display: flex;
+    align-items: center;
+}
+
+article li{
     background-color: white;
     border-radius: 20px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-.complement{   
-    width: 85%; 
-    font-size: 0.9rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.boite{
+   width: 100%;
 }
 
-b{
-    position: absolute;
-    right: 40px;
+.animation{
+    justify-content: center;
+    height: 100px;
+    margin: 0;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--couleurtertiaire-color);
+    color: white;
 }
 
 footer{
     position: absolute;
     width: 100%;
-    top: 1800px;
+    top: 1850px;
     background-color: var(--couleurfondnoirfooter-color);
     color: white;
     font-size: 1.3rem;
@@ -153,10 +168,19 @@ footer a:hover{
     color: black;
 }
 
+.complement{   
+    display: flex;justify-content: space-between;
+    width: 85%; 
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .fa-heart{
     position: absolute;
     right: 6vw;
-    top: 40px;
+    top: 20px;
     font-size: 2rem;
 }
 
@@ -191,6 +215,54 @@ footer a:hover{
     animation: coeur linear 500ms 1 forwards;
 }
 
+@media  screen and (min-width: 769px){
+
+    footer,
+    footer ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer, footer ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer h3{
+        padding: 2vw 0 0 0;
+        font-size: 1.8rem;
+    }
+
+    article h1{
+        width: 50%;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .logo{
+        width: 250px;
+    }
+
+    .fa-arrow-left{
+        top: 28px;
+        font-size: 1.7rem;
+    }
+    
+}
+
+@media  screen and (min-width: 1281px){
+
+    .logo{
+        width: 300px;
+    }
+
+    .fa-arrow-left{
+        top: 30px;
+        font-size: 1.9rem;
+    }
+}
 
 
 

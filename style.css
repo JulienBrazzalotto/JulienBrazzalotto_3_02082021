@@ -19,6 +19,10 @@
 
 @keyframes coeur{
     0% {
+        transform: scale(1);
+        color: transparent
+    }
+    1% {
         transform: scale(0);
         color: var(--couleurprimaire-color)
     }
@@ -198,7 +202,9 @@ footer a{
     border-radius: 200px; 
 }
 
-.fa-mobile-alt, .fa-list-ul, .fa-store{
+.fa-mobile-alt,
+.fa-list-ul,
+.fa-store{
     margin-right: 10vw;
 }
 
@@ -237,7 +243,8 @@ footer a{
     font-size: 0.9rem;
 }
 
-.fa-utensils, .fa-hands-helping{
+.fa-utensils,
+.fa-hands-helping{
     margin-right: 10px;
 }
 
@@ -320,7 +327,9 @@ footer a:hover{
         margin: 0 1vw 0 -10px;
     }
 
-    .fa-mobile-alt, .fa-list-ul, .fa-store{
+    .fa-mobile-alt,
+    .fa-list-ul,
+    .fa-store{
         margin-right: 1vw;
     }
 
@@ -369,6 +378,8 @@ footer a:hover{
 
     img:not(.logo){
         width: 22vw;
+        overflow: hidden;
+        object-fit: cover;
     }
 
     figure{
@@ -382,6 +393,11 @@ footer a:hover{
     .nouveau{
         left: 60%;
         padding: 5px 10px 5px 10px;
+    }
+
+    .fa-heart{
+        position: relative;
+        left: 50%;
     }
 }
     

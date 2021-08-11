@@ -2,7 +2,7 @@
 
 @keyframes fa-circle-notch{
     0% {
-        color: var(--couleurprimaire-color);                
+        color: var(--couleurprimaire-color);            
     }
     33% {
         color: var(--couleursecondaire-color);        
@@ -17,22 +17,52 @@
     }
 }
 
-@keyframes coeur{
+@keyframes html{
     0% {
-        transform: scale(1);
-        color: transparent
-    }
-    1% {
-        transform: scale(0);
-        color: var(--couleurprimaire-color)
-    }
-    66% {
-        transform: scale(0.8);
-        color: var(--couleurprimaire-color)
+        opacity: 0.2;
     }
     100% {
+        opacity: 1;
+    }
+}
+
+@keyframes nouveau {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes coeuron{
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        color: var(--couleurprimaire-color);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(0.8);
+        color: var(--couleurprimaire-color);
+    }
+    100% {
+        opacity: 1;
         transform: scale(1);
         color: var(--couleursecondaire-color);
+    }
+}
+
+@keyframes coeuroff{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -43,6 +73,7 @@ html{
     --couleurfondgrisform-color: #eaeaea;
     --couleurfondgrispresentation-color: #f6f6f6;
     --couleurfondnoirfooter-color: #353535;
+    animation: html 3s linear 1;
 }
 
 body{
@@ -230,11 +261,13 @@ footer a{
     border-radius: 5px;    
     background-color: var(--couleurtertiaire-color);
     color: #008766;
+    animation: nouveau 1.5s infinite;
 }
 
 .fa-heart{
     position: absolute;
     right: 10vw;
+    padding: 5px;
     font-size: 2rem;
     background-color: white;
 }
@@ -260,9 +293,9 @@ img:not(.logo){
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
 }
 
-.fa-heart:hover{
+.on:hover{
     transform-origin: 50% 50%;
-    animation: coeur linear 500ms 1 forwards;
+    animation: coeuron linear 500ms 1 forwards;
 }
 
 footer a:hover{

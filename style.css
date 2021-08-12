@@ -2,31 +2,36 @@
 
 @keyframes fa-circle-notch{
     0% {
+        opacity: 1;
         color: var(--couleurprimaire-color);            
     }
-    33% {
+    40% {
         color: var(--couleursecondaire-color);        
     }
-    66% {
+    80% {
         color: var(--couleurtertiaire-color);
         opacity: 1;        
     }
-    100%{
+    98% {
         color: var(--couleurtertiaire-color);
         opacity: 0;
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(999999999px);
     }
 }
 
-@keyframes html{
+@keyframes fond{
     0% {
-        opacity: 0.2;
+        opacity: 0.5;
     }
     100% {
         opacity: 1;
     }
 }
 
-@keyframes nouveau {
+@keyframes nouveau{
     0% {
         opacity: 0;
     }
@@ -59,10 +64,10 @@
 
 @keyframes coeuroff{
     0% {
-        opacity: 0;
+        opacity: 0;        
     }
     100% {
-        opacity: 1;
+        opacity: 1;        
     }
 }
 
@@ -73,11 +78,11 @@ html{
     --couleurfondgrisform-color: #eaeaea;
     --couleurfondgrispresentation-color: #f6f6f6;
     --couleurfondnoirfooter-color: #353535;
-    animation: html 3s linear 1;
 }
 
 body{
     font-family: 'Roboto', verdana, serif;
+    animation: fond 3s linear 1 both;
 }
 
 a{

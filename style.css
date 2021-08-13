@@ -70,6 +70,7 @@ html{
     --couleurfondgrisform-color: #eaeaea;
     --couleurfondgrispresentation-color: #f6f6f6;
     --couleurfondnoirfooter-color: #353535;
+    scroll-behavior: smooth;
 }
 
 body{

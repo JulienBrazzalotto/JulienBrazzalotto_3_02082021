@@ -15,10 +15,12 @@
     98% {
         color: var(--couleurtertiaire-color);
         opacity: 0;
-        transform: translateX(0);
+        transform: translateY(0);
     }
     100% {
-        transform: translateX(999999999px);
+        color: var(--couleurtertiaire-color);
+        opacity: 0;
+        transform: translateY(999999999px);
     }
 }
 
@@ -70,6 +72,7 @@ html{
     --couleurfondgrisform-color: #eaeaea;
     --couleurfondgrispresentation-color: #f6f6f6;
     --couleurfondnoirfooter-color: #353535;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -333,7 +336,6 @@ footer a{
 .fa-circle-notch{
     font-size: 150px;   
     animation: fa-spin linear 500ms infinite;
-    overflow: hidden; 
 }
 
 .opacite{

@@ -619,7 +619,7 @@ article li:focus .fa-check-circle {
 .menu footer{
     position: absolute;
     width: 100%;
-    top: 2100px;
+    top: 2150px;
     padding: 0;
     background-color: var(--couleurfondnoirfooter-color);
     color: white;
@@ -710,6 +710,10 @@ article li:focus .fa-check-circle {
     animation: menu 1s linear 600ms 1;
 }
 
+.menulanote footer{
+    top: 2200px;
+}
+
 @media  screen and (min-width: 769px){
 
     .menu h1{
@@ -730,6 +734,9 @@ article li:focus .fa-check-circle {
         top: 50px;
     }
 
+    .menulanote footer{
+        top: 2250px;
+    }
 }
 
 @media  screen and (min-width: 1281px){
@@ -776,5 +783,9 @@ article li:focus .fa-check-circle {
 
     article li:hover .boite{
         width: 77%;
+    }
+
+    .menulanote footer{
+        top: 2700px;
     }
 }

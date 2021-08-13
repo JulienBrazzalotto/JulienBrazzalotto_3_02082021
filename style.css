@@ -346,6 +346,15 @@ footer a{
         display: flex;
         flex-direction: row;
     }
+    
+    .fonctionnement ul{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .fonctionnement li{
+        width: 31%;
+    }
 
     footer, footer ul{
         flex-direction: column;
@@ -368,15 +377,6 @@ footer a{
 
     .fonctionnement{
         margin: 5vw;
-    }
-
-    .fonctionnement ul{
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .fonctionnement li{
-        width: 31%;
     }
 
     .nombre{
@@ -600,16 +600,19 @@ b{
     white-space: nowrap;
 }
 
-article li:hover .animation{
+article li:hover .animation,
+article li:focus .animation{
     width: 20%;
     opacity: 1;
 }
 
-article li:hover .boite{
+article li:hover .boite,
+article li:focus .boite{
     width: 60%;
 }
 
-article li:hover .fa-check-circle {
+article li:hover .fa-check-circle,
+article li:focus .fa-check-circle {
     animation: rotation 1s forwards;
 }
 
@@ -713,6 +716,11 @@ article li:hover .fa-check-circle {
         font-size: 2rem;
     }
 
+    .menu footer h3{
+        padding: 0;
+        font-size: 1.8rem;
+    }
+
     .fa-arrow-left{
         top: 28px;
         font-size: 1.7rem;
@@ -722,13 +730,20 @@ article li:hover .fa-check-circle {
         top: 50px;
     }
 
-    .menu footer h3{
-        padding: 0;
-        font-size: 1.8rem;
-    }
 }
 
 @media  screen and (min-width: 1281px){
+
+    
+    b,
+    .menu h2,
+    .menu h3{
+        font-size: 1.5rem;
+    }
+
+    .menu footer{
+        top: 2500px;
+    }
 
     .fa-arrow-left{
         top: 38px;
@@ -739,5 +754,27 @@ article li:hover .fa-check-circle {
         position: relative;
         left: 70vw;
         top: 30px;
+        font-size: 3rem;
+    }
+
+    .menu .animation{
+        
+        height: 140px;
+        font-size: 2.2rem;
+    }
+
+    .complement{
+        width: 100%;
+        padding-right: 50px;
+        font-size: 1.3rem;
+    }
+
+    article li:hover .animation{
+        width: 20%;
+        opacity: 1;
+    }
+
+    article li:hover .boite{
+        width: 77%;
     }
 }

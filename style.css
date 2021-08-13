@@ -15,10 +15,12 @@
     98% {
         color: var(--couleurtertiaire-color);
         opacity: 0;
-        transform: translateX(0);
+        transform: translateY(0);
     }
     100% {
-        transform: translateX(999999999px);
+        color: var(--couleurtertiaire-color);
+        opacity: 0;
+        transform: translateY(999999999px);
     }
 }
 
@@ -334,7 +336,6 @@ footer a{
 .fa-circle-notch{
     font-size: 150px;   
     animation: fa-spin linear 500ms infinite;
-    overflow: hidden; 
 }
 
 .opacite{

@@ -20,7 +20,7 @@
     100% {
         color: var(--couleurtertiaire-color);
         opacity: 0;
-        transform: translateY(999999999px);
+        transform: translateY(-999999999px);
     }
 }
 

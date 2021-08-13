@@ -54,6 +54,15 @@
     }
 }
 
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 html{
     --couleurprimaire-color: #9356DC;
     --couleursecondaire-color: #FF79DA ;
@@ -272,30 +281,28 @@ footer a{
 }
 
 .coeur2 {
-position: absolute;
-right: 0;
-top: 0;
-background: linear-gradient(to top left, var(--couleurprimaire-color) 0%, var(--couleursecondaire-color) 100%);
-background-clip: text;
--webkit-background-clip: text;
-color: transparent;
-opacity: 0;
-transform: scale(0);
-transform-origin: bottom;
-transition: 0.8s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to left top, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: 0.8s ease;
 }
 
 .coeur1:hover,
 .coeur1:focus {
-background-clip: text;
--webkit-background-clip: text;
-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .coeur1:hover .coeur2,
 .coeur1:focus .coeur2 {
-transform: scale(1);
-opacity: 1;
+    transform: scale(1);
+    opacity: 1;
 }
 
 .fa-hands-helping{
@@ -462,7 +469,7 @@ opacity: 1;
     width: 100%;
 }
 
-.menu header:not(article header){
+.menu header:not(.titreheader){
     position: fixed;
     width: 100%;
     background-color: hsla(0, 0%, 100%);
@@ -491,6 +498,12 @@ article header{
     align-items: center;
 }
 
+article section,
+.boite{
+    display: flex;
+    flex-direction: column;
+}
+
 article header,
 article h2,
 article ul{
@@ -502,9 +515,9 @@ article h2{
 }
 
 hr{
-    position: absolute;
-    left: 20px;
+    justify-content: flex-start;
     width: 60px;
+    margin-left: 20px;
     border: 2px solid var(--couleurtertiaire-color);
     background: var(--couleurtertiaire-color);
 }
@@ -519,9 +532,14 @@ hr{
     object-fit: cover;
 }
 
+.menu .coeur1{
+    top: 15px;
+}
+
 .menu li{
-    padding: 0 0 0 20px;
+    padding: 0 20px 0 20px;
     margin-bottom: 20px;
+    transition: transform 1s;
 }
 
 .menu ul{
@@ -542,22 +560,63 @@ hr{
 }
 
 .menu .boite{
-    width: 100%;
+    width: 90%;
+    transition: width 0.4s linear;
 }
- 
+
+.menu h3{
+    padding-right: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+b{
+    position: relative;
+    top: 30px;
+}
+
 .menu .animation{
     justify-content: center;
-    height: 100px;
+    position: absolute;
+    right: 18px;
+    height: 105px;
+    width: 0px;
     margin: 0;
     border-radius: 0 20px 20px 0;
     background-color: var(--couleurtertiaire-color);
     color: white;
+    transition: width 0.5s ease-in-out;
+    opacity: 0;
+    font-size: 2rem;
+}
+
+.complement{
+    width: 80%;
+    padding-right: 50px;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+article li:hover .animation{
+    width: 20%;
+    opacity: 1;
+}
+
+article li:hover .boite{
+    width: 60%;
+}
+
+article li:hover .fa-check-circle {
+    animation: rotation 1s forwards;
 }
 
 .menu footer{
     position: absolute;
     width: 100%;
-    top: 1920px;
+    top: 2100px;
     padding: 0;
     background-color: var(--couleurfondnoirfooter-color);
     color: white;
@@ -598,15 +657,6 @@ hr{
     color: black;
 }
 
-.menu .complement{   
-    display: flex;
-    justify-content: space-between;
-    width: 85%; 
-    font-size: 0.9rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
 .menu .boutonmenu,
 .menu .commander{
     display: flex;
@@ -654,7 +704,7 @@ hr{
 .entrees .li4,
 .plats .li4,
 .desserts .li4 {
-    animation: menu 1s linear 400ms 1;
+    animation: menu 1s linear 600ms 1;
 }
 
 @media  screen and (min-width: 769px){

@@ -9,7 +9,7 @@ Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la rest
 
 Maquette
 
-![maquette mobile](../images/logo/Accueil.png)
+![maquette mobile](https://raw.githubusercontent.com/JulienBrazzalotto/JulienBrazzalotto_3_02082021/main/images/logo/Accueil.png)
 
 ### Technologies
 - Le développement devra se faire en CSS, sans JavaScript.

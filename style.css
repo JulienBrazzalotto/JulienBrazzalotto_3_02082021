@@ -41,7 +41,17 @@
     100% {
         opacity: 1;
     }
-    
+}
+
+@keyframes menu {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
 }
 
 html{
@@ -621,6 +631,30 @@ hr{
 .menu .commander:focus{
     background: linear-gradient(to top left, hsla(267, 66%, 60%, 0.9), hsla(317, 100%, 74%, 0.9));
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+}
+
+.entrees .li1,
+.plats .li1,
+.desserts .li1 {
+    animation: menu 1s linear 0ms 1;
+}
+
+.entrees .li2,
+.plats .li2,
+.desserts .li2 {
+    animation: menu 1s linear 200ms 1;
+}
+
+.entrees .li3,
+.plats .li3,
+.desserts .li3 {
+    animation: menu 1s linear 400ms 1;
+}
+
+.entrees .li4,
+.plats .li4,
+.desserts .li4 {
+    animation: menu 1s linear 400ms 1;
 }
 
 @media  screen and (min-width: 769px){

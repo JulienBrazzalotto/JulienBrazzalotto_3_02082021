@@ -327,11 +327,13 @@ footer a{
     margin-top: -75px;
     margin-left: -75px;
     animation: fa-circle-notch  3s 1 both;
+    overflow: hidden;
 }   
 
 .fa-circle-notch{
     font-size: 150px;   
-    animation: fa-spin linear 500ms infinite;  
+    animation: fa-spin linear 500ms infinite;
+    overflow: hidden; 
 }
 
 .opacite{

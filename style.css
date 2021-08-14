@@ -450,7 +450,7 @@ footer a{
 
     .titrerestaurants{
         position: absolute;
-        bottom: 20px;
+        bottom: 330px;
         margin: 0;
     }
 
@@ -632,7 +632,7 @@ article li:focus .fa-check-circle {
 .menu footer{
     position: absolute;
     width: 100%;
-    top: 2150px;
+    top: 2100px;
     padding: 0;
     background-color: var(--couleurfondnoirfooter-color);
     color: white;
@@ -799,6 +799,6 @@ article li:focus .fa-check-circle {
     }
 
     .menulanote footer{
-        top: 2700px;
+        top: 2620px;
     }
 }

@@ -130,7 +130,7 @@ form{
     justify-content: flex-start;
 }
 
-.fonctionnement li:not(.commande){  
+.fonctionnement li{  
     margin: 0 0 20px 0;
     height: 75px;
     background: var(--couleurfondgrispresentation-color);
@@ -221,14 +221,6 @@ footer a{
 
 .fonctionnement{
     margin: 5vw 5vw 15vw 5vw;
-}
-
-.commande{   
-    margin: 0 0 20px 0;
-    height: 75px;
-    border-radius: 25px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
-    font-weight: bold;
 }
 
 .nombre{

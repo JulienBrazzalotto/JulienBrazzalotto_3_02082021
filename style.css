@@ -227,13 +227,8 @@ footer a{
     margin: 0 0 20px 0;
     height: 75px;
     border-radius: 25px;
-    background: hsla(267, 66%, 60%, 0.2);
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
     font-weight: bold;
-}
-
-.fa-store{
-    color: var(--couleurprimaire-color);
 }
 
 .nombre{
@@ -250,6 +245,14 @@ footer a{
 .fa-list-ul,
 .fa-store{
     margin-right: 10vw;
+}
+
+.fonctionnement li:hover .icone{
+    color: var(--couleurprimaire-color);
+}
+
+.fonctionnement li:hover {
+    background: hsla(267, 66%, 60%, 0.2);;
 }
 
 .restaurants{
@@ -288,6 +291,7 @@ footer a{
     right: 0;
     top: 0;
     background: linear-gradient(to left top, #9356DC, #FF79DA);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     opacity: 0;
@@ -298,6 +302,7 @@ footer a{
 
 .coeur1:hover,
 .coeur1:focus {
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -445,7 +450,7 @@ footer a{
 
     .titrerestaurants{
         position: absolute;
-        top: 73vh;
+        bottom: 20px;
         margin: 0;
     }
 
@@ -602,6 +607,10 @@ b{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+article li:hover{
+    cursor: pointer;
 }
 
 article li:hover .animation,

@@ -142,7 +142,7 @@ form{
 figure{
     display: block;
     height: 270px;
-    margin: 0 0 5vw 0;
+    margin: 50px 0 5vw 0;
     background: white;
     border-radius: 20px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
@@ -445,12 +445,12 @@ footer a{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 8vw 2vw 1vw 2vw;
+        padding: 5vw 2vw 1vw 2vw;
     }
 
     .titrerestaurants{
         position: absolute;
-        bottom: 25%;
+        bottom: auto;
         margin: 0;
     }
 

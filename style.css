@@ -239,11 +239,13 @@ footer a{
     margin-right: 10vw;
 }
 
-.fonctionnement li:hover .icone{
+.fonctionnement li:hover .icone,
+.fonctionnement li:focus .icone{
     color: var(--couleurprimaire-color);
 }
 
-.fonctionnement li:hover {
+.fonctionnement li:hover,
+.fonctionnement li:focus {
     background: hsla(267, 66%, 60%, 0.2);;
 }
 

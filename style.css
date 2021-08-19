@@ -3,22 +3,22 @@
 @keyframes fa-circle-notch{
     0% {
         opacity: 1;
-        color: var(--couleurprimaire-color);            
+        color: var(--couleur-primaire);            
     }
     40% {
-        color: var(--couleursecondaire-color);        
+        color: var(--couleur-secondaire);        
     }
     80% {
-        color: var(--couleurtertiaire-color);
+        color: var(--couleur-tertiaire);
         opacity: 1;        
     }
     98% {
-        color: var(--couleurtertiaire-color);
+        color: var(--couleur-tertiaire);
         opacity: 0;
         transform: translateY(0);
     }
     100% {
-        color: var(--couleurtertiaire-color);
+        color: var(--couleur-tertiaire);
         opacity: 0;
         transform: translateY(-999999999px);
     }
@@ -66,12 +66,12 @@
 }
 
 html{
-    --couleurprimaire-color: #9356DC;
-    --couleursecondaire-color: #FF79DA ;
-    --couleurtertiaire-color: #99E2D0;
-    --couleurfondgrisform-color: #eaeaea;
-    --couleurfondgrispresentation-color: #f6f6f6;
-    --couleurfondnoirfooter-color: #353535;
+    --couleur-primaire: #9356DC;
+    --couleur-secondaire: #FF79DA ;
+    --couleur-tertiaire: #99E2D0;
+    --couleur-fond-gris-form: #eaeaea;
+    --couleur-fond-gris-presentation: #f6f6f6;
+    --couleur-fond-noir-footer: #353535;
     scroll-behavior: smooth;
 }
 
@@ -101,7 +101,7 @@ figcaption,
 h1,
 .ville,
 .soustitre,
-.boutonrestaurants,
+.bouton-restaurants,
 .bouton,
 .commande{
     display: flex;
@@ -117,7 +117,7 @@ header{
 form{
     align-items: center;
     height: 50px;
-    background: var(--couleurfondgrisform-color);
+    background: var(--couleur-fond-gris-form);
     box-shadow: inset 0px 11px 8px -15px  black;
 }
 
@@ -127,30 +127,27 @@ form{
 }
 
 .fonctionnement li{
-    justify-content: flex-start;
-}
-
-.fonctionnement li{  
-    margin: 0 0 20px 0;
+    justify-content: flex-start;  
     height: 75px;
-    background: var(--couleurfondgrispresentation-color);
+    margin: 0 0 20px 0;
     border-radius: 25px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
     font-weight: bold;
+    background: var(--couleur-fond-gris-presentation);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
 }
 
 figure{
     display: block;
     height: 270px;
     margin: 50px 0 5vw 0;
-    background: white;
     border-radius: 20px;
+    background: white;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.253);    
 }
 
 img:not(.logo){
-    height: 175px;
     width: 100%;
+    height: 175px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
@@ -163,7 +160,7 @@ figcaption{
 
 footer{
     padding: 5vw;
-    background: var(--couleurfondnoirfooter-color);
+    background: var(--couleur-fond-noir-footer);
     color: white;    
 }
 
@@ -181,8 +178,8 @@ footer li{
 }
 
 footer a{
-    color: white;
     font-size: 1.3rem;
+    color: white;
 }
 
 .logo{
@@ -193,12 +190,12 @@ footer a{
     font-family: 'Roboto';
     font-weight: bold;
     color: black;
-    background: var(--couleurfondgrisform-color);
+    background: var(--couleur-fond-gris-form);
 }
 
 .presentation:not(form){
     height: 286px;
-    background: var(--couleurfondgrispresentation-color);    
+    background: var(--couleur-fond-gris-presentation);    
 }
 
 .ville{
@@ -207,12 +204,12 @@ footer a{
     border: none;
     font-weight: bold;
     font-family: 'Roboto';  
-    background: var(--couleurfondgrisform-color);
+    background: var(--couleur-fond-gris-form);
 }
 
 .bouton{
-    height: 50px;
     width: 220px;
+    height: 50px;
     border-radius: 200px;
     color: white;
     background: linear-gradient(to left top, #9356DC, #FF79DA);
@@ -227,10 +224,10 @@ footer a{
     position: relative;
     margin: 0 6vw 0 -10px;
     padding: 1px 5px 0 5px;
-    background: var(--couleurprimaire-color);
-    color: white;
-    border: 1px solid var(--couleurprimaire-color);
-    border-radius: 200px; 
+    border: 1px solid var(--couleur-primaire);
+    border-radius: 200px;
+    background: var(--couleur-primaire);
+    color: white; 
 }
 
 .fa-mobile-alt,
@@ -241,7 +238,7 @@ footer a{
 
 .fonctionnement li:hover .icone,
 .fonctionnement li:focus .icone{
-    color: var(--couleurprimaire-color);
+    color: var(--couleur-primaire);
 }
 
 .fonctionnement li:hover,
@@ -251,14 +248,14 @@ footer a{
 
 .restaurants{
     padding: 8vw 5vw 5vw 5vw;
-    background: var(--couleurfondgrispresentation-color);
+    background: var(--couleur-fond-gris-presentation);
 }
 
-.titrerestaurants{
+.titre-restaurants{
     margin-bottom: 10vw;
 }
 
-.nomrestaurants{
+.nom-restaurants{
     margin: 10px 0 0 0;
 }
 
@@ -267,9 +264,9 @@ footer a{
     left: 70%;
     bottom: 260px;
     padding: 1vw 2vw 1vw 2vw;
-    border: 2px solid var(--couleurtertiaire-color);
+    border: 2px solid var(--couleur-tertiaire);
     border-radius: 5px;    
-    background: var(--couleurtertiaire-color);
+    background: var(--couleur-tertiaire);
     color: #008766;
     animation: nouveau 1.5s infinite;
 }
@@ -285,20 +282,12 @@ footer a{
     right: 0;
     top: 0;
     background: linear-gradient(to left top, #9356DC, #FF79DA);
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     opacity: 0;
     transform: scale(0);
     transform-origin: bottom;
     transition: 0.8s ease;
-}
-
-.coeur1:hover,
-.coeur1:focus {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
 }
 
 .coeur1:hover .coeur2,
@@ -326,8 +315,7 @@ footer a{
     position: absolute;
     top: 20%;
     left: 50%;
-    margin-top: -75px;
-    margin-left: -75px;
+    margin: -75px 0 0 -75px;
     animation: fa-circle-notch  3s 1 both;
     overflow: hidden;
 }   
@@ -374,8 +362,8 @@ footer a{
     }
 
     .bouton{
-        height: 60px;
         width: 300px;
+        height: 60px;
     }
 
     .fonctionnement{
@@ -414,7 +402,7 @@ footer a{
     }
 
     .fonctionnement h2,
-    .titrerestaurants{
+    .titre-restaurants{
         font-size: 1.8rem;
     }
 
@@ -442,7 +430,7 @@ footer a{
         padding: 5vw 2vw 1vw 2vw;
     }
 
-    .titrerestaurants{
+    .titre-restaurants{
         position: absolute;
         bottom: auto;
         margin: 0;
@@ -472,7 +460,7 @@ footer a{
     width: 100%;
 }
 
-.menu header:not(.titreheader){
+.menu header:not(.titre-header){
     position: fixed;
     width: 100%;
     background-color: hsla(0, 0%, 100%);
@@ -481,13 +469,17 @@ footer a{
     z-index: 1;
 }
 
+.menu h2{
+    text-transform: uppercase;
+}
+
 article{
     position: relative;
     top: 70px ;
     width: 100%;
     padding-bottom: 120px;
     border-radius: 30px 30px 0 0;
-    background-color: var(--couleurfondgrispresentation-color);
+    background-color: var(--couleur-fond-gris-presentation);
 }
 
 article h1{
@@ -521,8 +513,8 @@ hr{
     justify-content: flex-start;
     width: 60px;
     margin-left: 20px;
-    border: 2px solid var(--couleurtertiaire-color);
-    background: var(--couleurtertiaire-color);
+    border: 2px solid var(--couleur-tertiaire);
+    background: var(--couleur-tertiaire);
 }
 
 .menu figure{
@@ -540,14 +532,14 @@ hr{
 }
 
 .menu li{
-    padding: 0 20px 0 20px;
     margin-bottom: 20px;
+    padding: 0 20px 0 20px;
     transition: transform 1s;
 }
 
 .menu ul{
-    padding: 20px 20px 5px 20px;
     margin-bottom: 20px;
+    padding: 20px 20px 5px 20px;
 }
 
 .menu article li,
@@ -557,8 +549,8 @@ hr{
 }
 
 .menu article li{
-    background-color: white;
     border-radius: 20px;
+    background-color: white;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -588,7 +580,7 @@ b{
     width: 0px;
     margin: 0;
     border-radius: 0 20px 20px 0;
-    background-color: var(--couleurtertiaire-color);
+    background-color: var(--couleur-tertiaire);
     color: white;
     transition: width 0.5s ease-in-out;
     opacity: 0;
@@ -627,18 +619,18 @@ article li:focus .fa-check-circle {
 
 .menu footer{
     position: absolute;
-    width: 100%;
     top: 1850px;
+    width: 100%;
     padding: 0;
-    background-color: var(--couleurfondnoirfooter-color);
-    color: white;
     font-size: 1.3rem;
+    background-color: var(--couleur-fond-noir-footer);
+    color: white;
 }
 
 .menu footer h3{
-    font-family: 'Shrikhand', Verdana, sans-serif;
-    font-weight: normal;
     padding-left: 20px;
+    font-family: 'Shrikhand', Verdana, sans-serif;
+    font-weight: normal;    
 }
 
 .menu footer ul{
@@ -646,8 +638,8 @@ article li:focus .fa-check-circle {
 }
 
 .menu footer li{
-    padding-left: 5px;
     margin-bottom: 10px;
+    padding-left: 5px;
 }
 
 .menu footer a:hover,
@@ -656,8 +648,8 @@ article li:focus .fa-check-circle {
 }
 
 .menu a{
-    color: white;
     font-size: 1.3rem;
+    color: white;
     text-decoration: none;
 }
 
@@ -681,8 +673,8 @@ article li:focus .fa-check-circle {
 }
 
 .menu .commander{
-    height: 50px;
     width: 220px;
+    height: 50px;
     border-radius: 200px;
     color: white;
     background: linear-gradient(to left top, #9356DC, #FF79DA);
@@ -774,7 +766,6 @@ article li:focus .fa-check-circle {
     }
 
     .menu .animation{
-        
         height: 100px;
         font-size: 2.2rem;
     }

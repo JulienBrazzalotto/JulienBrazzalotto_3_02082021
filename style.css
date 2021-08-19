@@ -271,26 +271,27 @@ footer a{
     animation: nouveau 1.5s infinite;
 }
 
-.coeur1 {
+.coeur-vide {
     position: absolute;
     right: 8.5vw;
     z-index: 1;
 }
 
-.coeur2 {
+.coeur-plein {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -1px;
     background: linear-gradient(to left top, #9356DC, #FF79DA);
     -webkit-background-clip: text;
     color: transparent;
     opacity: 0;
     transform: scale(0);
+    transform-origin: bottom;
     transition: 0.8s ease;
 }
 
-.coeur1:hover .coeur2,
-.coeur1:focus .coeur2 {
+.coeur-vide:hover .coeur-plein,
+.coeur-vide:focus .coeur-plein {
     transform: scale(0.92);
     opacity: 1;
 }
@@ -440,7 +441,7 @@ footer a{
         padding: 5px 10px 5px 10px;
     }
 
-    .coeur1{
+    .coeur-vide{
         position: relative;
         left: 17vw;
     }
@@ -449,8 +450,6 @@ footer a{
         margin: 0;
     }
 }
-
-
 
 /*========================menu========================*/
 
@@ -508,7 +507,7 @@ article h2{
     margin-bottom: 5px;
 }
 
-hr{
+.soulignement{
     justify-content: flex-start;
     width: 60px;
     margin-left: 20px;
@@ -526,7 +525,7 @@ hr{
     object-fit: cover;
 }
 
-.menu .coeur1{
+.menu .coeur-vide{
     top: 15px;
 }
 
@@ -618,7 +617,7 @@ article li:focus .fa-check-circle {
 
 .menu footer{
     position: absolute;
-    top: 1850px;
+    top: 1800px;
     width: 100%;
     padding: 0;
     font-size: 1.3rem;
@@ -660,14 +659,14 @@ article li:focus .fa-check-circle {
     color: black;
 }
 
-.menu .boutonmenu,
+.menu .bouton-menu,
 .menu .commander{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menu .boutonmenu{
+.menu .bouton-menu{
     margin-top: 60px;
 }
 
@@ -686,32 +685,32 @@ article li:focus .fa-check-circle {
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
 }
 
-.entrees .li1,
-.plats .li1,
-.desserts .li1 {
+.entrees .effet-entree-1,
+.plats .effet-entree-1,
+.desserts .effet-entree-1 {
     animation: menu 1s linear 0ms 1;
 }
 
-.entrees .li2,
-.plats .li2,
-.desserts .li2 {
+.entrees .effet-entree-2,
+.plats .effet-entree-2,
+.desserts .effet-entree-2 {
     animation: menu 1s linear 200ms 1;
 }
 
-.entrees .li3,
-.plats .li3,
-.desserts .li3 {
+.entrees .effet-entree-3,
+.plats .effet-entree-3,
+.desserts .effet-entree-3 {
     animation: menu 1s linear 400ms 1;
 }
 
-.entrees .li4,
-.plats .li4,
-.desserts .li4 {
+.entrees .effet-entree-4,
+.plats .effet-entree-4,
+.desserts .effet-entree-4 {
     animation: menu 1s linear 600ms 1;
 }
 
 .menulanote footer{
-    top: 1950px;
+    top: 1900px;
 }
 
 @media  screen and (min-width: 769px){
@@ -725,17 +724,21 @@ article li:focus .fa-check-circle {
         font-size: 1.8rem;
     }
 
+    .menu footer{
+        top: 1820px;
+    }
+
     .fa-arrow-left{
         top: 28px;
         font-size: 1.7rem;
     }
 
-    .menu .coeur1{
+    .menu .coeur-vide{
         top: 50px;
     }
 
     .menulanote footer{
-        top: 2000px;
+        top: 1950px;
     }
 }
 
@@ -749,7 +752,7 @@ article li:focus .fa-check-circle {
     }
 
     .menu footer{
-        top: 2100px;
+        top: 2050px;
     }
 
     .fa-arrow-left{
@@ -757,7 +760,7 @@ article li:focus .fa-check-circle {
         font-size: 2rem;
     }
 
-    .menu .coeur1{
+    .menu .coeur-vide{
         position: relative;
         left: 70vw;
         top: 30px;
@@ -785,6 +788,6 @@ article li:focus .fa-check-circle {
     }
 
     .menulanote footer{
-        top: 2220px;
+        top: 2200px;
     }
 }

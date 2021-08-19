@@ -286,13 +286,12 @@ footer a{
     color: transparent;
     opacity: 0;
     transform: scale(0);
-    transform-origin: bottom;
     transition: 0.8s ease;
 }
 
 .coeur1:hover .coeur2,
 .coeur1:focus .coeur2 {
-    transform: scale(1);
+    transform: scale(0.92);
     opacity: 1;
 }
 
